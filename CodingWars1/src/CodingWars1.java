@@ -10,13 +10,19 @@ public class CodingWars1 {
 		String sentenceArray[] = sentence.split(" ");
 		sentence = "";
 		for (int i = 0; i < sentenceArray.length; i++) {
-			if (sentenceArray[i].length() >= 5) {
+			if (sentenceArray[i].length() >= 5 && sentenceArray.length > 1) {
 				StringBuffer reversed = new StringBuffer(sentenceArray[i]).reverse();
 				String reversedString = reversed.toString();
 				
 				sentence += reversedString + " ";
 			}
-			else {
+			else if (sentenceArray[i].length() >= 5) {
+				StringBuffer reversed = new StringBuffer(sentenceArray[i]).reverse();
+				String reversedString = reversed.toString();
+				
+				sentence += reversedString;
+			}
+			else if (sentenceArray) {
 				sentence += sentenceArray[i] + " ";
 			}
 		}
